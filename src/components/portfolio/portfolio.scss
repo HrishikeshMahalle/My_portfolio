@@ -1,0 +1,137 @@
+@import '../../global.scss';
+
+.portfolio{
+    background-color:#EECC00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    h1{
+        font-size: 50px;
+        margin-top: 10px;
+
+        @include mobile{
+            font-size: 30px;
+            font-weight: 800;
+            margin-top: 10px;
+            padding-bottom: 20px;
+            
+        }
+    }
+    ul{
+       margin: 10px; 
+       padding: 0;
+       list-style: none;
+       display: flex;
+
+       @include mobile{
+        margin: 0px 0;
+        flex-wrap: warp;
+        justify-content: center;
+    }
+
+       li{
+           font-size: 14px;
+           margin-right: 5px;;
+           padding: 7px;
+           border-radius: 10px;
+           cursor: pointer;
+           overflow: hidden;
+        
+            a{
+                text-decoration: none;
+                list-style: none;
+                color:black;
+            }
+
+           &:active{
+               background-color: black;
+               color: white;
+               a{
+                   color: white;
+               }
+           }
+       }
+    }
+    .container{
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include mobile{
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .item{
+            width: 220px;
+            height: 150px;
+            border-radius: 5px;
+            border: 1px solid rgb(255, 255, 255);
+            margin: 10px 20px;
+            font-weight: bolder;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(255, 0, 170);
+            position: relative;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            -webkit-filter: blur(0);
+            filter: grayscale(0) blur(0);
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+
+            @include mobile{
+                width: 130px;
+                height: 120px ;
+            }
+      
+
+            h3{
+                position: absolute;
+                font-size: 20px;
+            }
+                .link{
+                    display: inline-block;
+                    position: absolute;
+                    font-size: 15px;
+                    text-decoration: none;
+                    top: 60%;
+                    color: white;
+                   
+                }
+                .link1{
+                    display: inline-block;
+                    position: absolute;
+                    font-size: 15px;
+                    text-decoration: none;
+                    top: 70%;
+                    color: white;
+                   
+                }
+
+           
+            img{
+                width: 100%;
+                height:100%;
+                object-fit: cover;
+                z-index: 1;
+            }
+
+            &:hover{
+               
+                img{
+                    -webkit-filter: blur(3px);
+                    filter: grayscale(0) blur(10);
+                    opacity: 0.3;
+                    z-index: 0;
+                }
+                
+            }
+
+        }
+    }
+}
